@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/compassImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="320dp"
+        android:contentDescription="@string/compass_image"
+        android:scaleX=".75"
+        android:scaleY=".75"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/compass" />
+
+    <TextView
+        android:id="@+id/degreeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="256dp"
+        android:text="@string/degrees"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/compassImageView" />
+
+    <TextView
+        android:id="@+id/latitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="269dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/latitude"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/compassImageView" />
+
+    <TextView
+        android:id="@+id/longitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="93dp"
+        android:layout_marginTop="221dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/longitude"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/altitude"
+        app:layout_constraintStart_toEndOf="@+id/latitude"
+        app:layout_constraintTop_toBottomOf="@+id/degreeText" />
+
+    <TextView
+        android:id="@+id/altitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="269dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/altitude"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/compassImageView" />
+
+    <TextView
+        android:id="@+id/latitudeHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="236dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/latitudeHeader"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/latitude"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/compassImageView" />
+
+    <TextView
+        android:id="@+id/longitudeHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="190dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/longitudeHeader"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/longitude"
+        app:layout_constraintEnd_toStartOf="@+id/altitudeHeader"
+        app:layout_constraintStart_toEndOf="@+id/latitudeHeader"
+        app:layout_constraintTop_toBottomOf="@+id/degreeText"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/altitudeHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="236dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/altitudeHeader"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/altitude"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/compassImageView" />
+
+    <EditText
+        android:id="@+id/magneticDeclinationInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="101dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="96dp"
+        android:ems="10"
+        android:hint="@string/magnetic_declination"
+        android:importantForAutofill="no"
+        android:inputType="numberSigned|numberDecimal"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        android:textColorHint="#00838F"
+        app:layout_constraintBottom_toTopOf="@+id/longitudeHeader"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

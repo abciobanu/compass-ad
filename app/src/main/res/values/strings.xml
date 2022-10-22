@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Compass AD</string>
+    <string name="compass_image">compassImage</string>
+    <string name="degrees">degrees</string>
+    <string name="latitude">latitude</string>
+    <string name="longitude">longitude</string>
+    <string name="altitude">altitude</string>
+    <string name="latitudeHeader">LATITUDE</string>
+    <string name="longitudeHeader">LONGITUDE</string>
+    <string name="altitudeHeader">ALTITUDE</string>
+    <string name="magnetic_declination">Magnetic declination</string>
+</resources>
